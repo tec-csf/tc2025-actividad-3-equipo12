@@ -2,4 +2,4 @@
 # El Maravilloso y Poderoso equipo 12
 Rafael Díaz Medina A01024592
 
-Edgar García
+Edgar García A01021730
