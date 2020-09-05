@@ -63,6 +63,7 @@ void RoundRobin(Pandilla * gang, int maxPandillas , int cores){
       int result=0;
       int  auxTime;
       int auxDos=0;
+	  int ronda=0;
       
       while(result!=1){
             for(int i=0; i<maxPandillas; i++){
@@ -75,6 +76,8 @@ void RoundRobin(Pandilla * gang, int maxPandillas , int cores){
                               printf("Pandilla %c pandillero id %d  tiempo restante %d\n",(gang+i)->namePandilla, (gang+i)->idPandillero=s, (gang+i)->robTime);
                               //}
                         }
+						ronda++;
+						printf("\nRonda de Quantum %d\n", ronda);
                   }
                   else if((gang+i)->robTime<=0){
                         if((gang+i+1)->robTime<=0){
