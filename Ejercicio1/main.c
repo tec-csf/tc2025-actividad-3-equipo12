@@ -17,8 +17,8 @@ typedef struct{
       int robTime;
 }Pandilla;
 
-void cpuRR(Pandilla * gang, int cores, int maxPandillas);
-void RoundRobin(Pandilla* gang, int maxPandillas);
+//void cpuRR(Pandilla * gang, int cores, int maxPandillas);
+void RoundRobin(Pandilla * gang, int , int );
 
 int main(int argc, const char * argv[]){
       int maxPandillas;
@@ -51,8 +51,15 @@ int main(int argc, const char * argv[]){
                   
             printf("\n id Pandillero %d", (gang+s)->idPandillero);
             printf("\n tiempo %d \n", (gang+s)->robTime);  
-      }
+      }    
 
+      RoundRobin(gang, maxPandillas, cores);  
+
+      free(gang);
+      gang=NULL;
+      return 0;
+}
+void RoundRobin(Pandilla * gang, int maxPandillas , int cores){
       int result=0;
       int  auxTime;
       int auxDos=0;
@@ -72,7 +79,7 @@ int main(int argc, const char * argv[]){
                   else if((gang+i)->robTime<=0){
                         if((gang+i+1)->robTime<=0){
                               auxDos++;
-                              printf("\nEntre a Auxdos\n");
+                              //printf("\nEntre a Auxdos\n");
                         }
                         if(auxDos==maxPandillas){
                               result=1;
@@ -83,10 +90,6 @@ int main(int argc, const char * argv[]){
                   }
                   
             }
-      }      
-
-      free(gang);
-      gang=NULL;
-      return 0;
+      }
 }
 
