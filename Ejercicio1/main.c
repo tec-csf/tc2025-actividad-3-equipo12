@@ -166,7 +166,7 @@ int main(int argc, const char * argv[]){
             temp[i] = bsTime[i];
       }
  
-      /*printf("\nTiempo Quantum\t");
+      printf("\nTiempo Quantum\t");
       scanf("%d", &qTime);
       for(total = 0, i = 0; x != 0;){
             if(temp[i] <= qTime && temp[i] > 0)

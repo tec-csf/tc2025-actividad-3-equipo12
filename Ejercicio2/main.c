@@ -1,5 +1,26 @@
-//Programa realizado por Rafael Medina y Edgar Garcia y un compañero graduado
-//Link den ayuda del video con programa:
+/*Programa realizado por Rafael Medina y Edgar Garcia y un compañero graduado
+Link den ayuda del video con programa:
+Escriba un programa en C que parta de un directorio dado y descienda por el árbol de archivos registrando 
+los tamaños de todos los archivos que encuentre. Cuando termine, deberá imprimir un histograma de los 
+tamaños de archivo, utilizando una anchura de urna especificada como parámetro ( por ejemplo, para un 
+valor de urna de 1024, todos los archivos con tamaño entre 0 y 1023 se colocan en una urna, los de 1024 
+a 2047 en otra y así sucesivamente).
+
+Debe utilizar llamadas al sistema (system calls). Por favor, verifique las llamadas al sistema para 
+manipulación de archivos y directorios que a aparecen en la última clase.
+
+Ejemplo de visualización del histograma:
+
+Urna	Número de archivos	Histograma
+0-1023	20	********************
+1024-2047	15	**************
+2048-3071	35	*****************************
+3072-4095	40	**************************************
+Sugerencia: Para determinar la cantidad de * a imprimir, defina una relación 
+respecto al número máximo de archivos obtenido. Por ejemplo, si el número máximo de archivos 
+obtenido es 1000, entonces divida la cantidad entre 100. De esta manera, para la cantidad máxima 
+imprimirá 10 * y todos los demás estarán acotados por debajo de este máximo.
+*/
 #include <stdlib.h>
 #include <stdio.h>
 #include <string.h>
